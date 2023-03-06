@@ -1,0 +1,20 @@
+{
+  "name": "wildersbook",
+  "version": "1.0.0",
+  "description": "an erzatz of facebook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "author": "carl Marion",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.4",
+    "typeorm": "^0.3.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
