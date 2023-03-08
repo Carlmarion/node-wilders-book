@@ -1,0 +1,21 @@
+POST http://localhost:3000/api/skill
+Content-Type: application/json
+
+{
+    "name": "Docker"
+}
+###
+GET http://localhost:3000/api/skills
+
+###
+GET http://localhost:3000/api/skills/React
+
+###
+PUT http://localhost:3000/api/skills/React
+Content-Type: application/json
+
+{
+    "name" : "Angular"
+}
+###
+DELETE http://localhost:3000/api/skills/javascript

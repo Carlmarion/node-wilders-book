@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/wilder
+Content-Type: application/json
+
+{
+    "name": "sammy"
+}
+
+###
+
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/api/wilders
+
+###
+
+GET http://localhost:3000/api/wilders/3
+
+###
+PUT http://localhost:3000/api/wilders/2
+Content-Type: application/json
+
+{
+    "name" : "jeannot"
+}
+###
+DELETE http://localhost:3000/api/wilders/4
