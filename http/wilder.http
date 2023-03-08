@@ -26,3 +26,7 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:3000/api/wilders/4
+
+###
+
+POST  http://localhost:3000/api/wilder/5/skill/4/add

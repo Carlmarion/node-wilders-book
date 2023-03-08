@@ -1,5 +1,6 @@
 const { dataSource } = require("../utils");
 const Wilder = require("../entity/Wilder");
+const Skill = require("../entity/Skill");
 
 module.exports = {
   create: async (req, res) => {
@@ -76,14 +77,22 @@ module.exports = {
     const wilderToUpdate = await dataSource.getRepository(Wilder).findOneBy({
       id: req.params.wilderId,
     });
+    if (!wilderToUpdate) {
+      return res.status(404).send("Wilder not found");
+    }
     console.log(wilderToUpdate, "wilderToUpdate");
 
     const skillToAdd = await dataSource
       .getRepository(Skill)
-      .findOneBy({ id: id.params.skillId });
+      .findOneBy({ id: req.params.skillId });
+    if (!skillToAdd) {
+      return res.status(404).send("skill not found");
+    }
 
     wilderToUpdate.skills = [...wilderToUpdate.skills, skillToAdd];
+
     await dataSource.getRepository(Wilder).save(wilderToUpdate);
-    res.send("wilderSkill added");
+
+    res.send("Skill added to wilder");
   },
 };
